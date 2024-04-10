@@ -2,11 +2,12 @@ from abc import ABC, abstractmethod
 from typing import Union
 from langchain.schema import AgentAction, AgentFinish
 import regex as re
+
 class BaseOutputParser(ABC):
     @abstractmethod
     def parse(self, llm_output: str, user_q) -> Union[AgentAction, AgentFinish]:
         pass
-
+#Class to handle action agent inputs and Observations.
 class CustomOutputParser(BaseOutputParser):
     def parse(self, llm_output: str, user_q) -> Union[AgentAction, AgentFinish]:
         if "Final Answer:" in llm_output:
