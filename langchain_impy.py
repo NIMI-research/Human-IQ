@@ -80,7 +80,7 @@ Question: {input}
         return prompt
 
     def answer_ques(self, ques):
-        template = """Given a question your task is to answer the question, please do not provide any other information other than the Answer
+        template = """Given a question your task is to answer the question, please do not provide any other information other than the answer.
                     Question: {ques}
                     Answer: """
         prompt = PromptTemplate(template=template, input_variables=["ques"])
