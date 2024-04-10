@@ -64,7 +64,7 @@ class BaseTemplateConstruction(ABC):
             res_list = [questions[i] for i in indexes]
         return res_list
 
-    def DPP_function(self, q: np.ndarray, final_list: np.ndarray) -> List[int]:
+    def dpp_function(self, q: np.ndarray, final_list: np.ndarray) -> List[int]:
         K = q * final_list * q
         obj_log_det = LogDeterminantFunction(n=20,
                                              mode="dense",
@@ -97,7 +97,7 @@ class TemplateConstruction(BaseTemplateConstruction):
                 x = [1 - levenshtein(i, j) / max(len(i), len(j)) for j in action_sequence_list]
                 final_list.append(x)
             final_list = np.array(final_list)
-        indices = self.DPP_function(q, final_list)
+        indices = self.dpp_function(q, final_list)
         final_template = f"Example 1:{data[indices[0]].get('One_Shot')}\n\nExample 2:\n\n{data[indices[1]].get('One_Shot')}\n\nExample 3:\n\n{data[indices[2]].get('One_Shot')}"
         return final_template
 
