@@ -2,7 +2,9 @@ from abc import ABC, abstractmethod
 from typing import List, Union, Dict, Any
 from langchain.schema import AgentAction, AgentFinish
 
+#Base class for Custom Agent.
 class BaseAgent(ABC):
+    
     @abstractmethod
     def plan(self, intermediate_steps, callbacks, **kwargs):
         pass
