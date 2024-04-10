@@ -79,7 +79,7 @@ To use the Human-IQ framework, follow these steps:
    out, answer_template_for_inference, completion_tokens = langchain_impl.execute_agent(question)
    ```
 
-The Human-IQ framework provides several options for customization:
+The HumanIQ framework provides several options for customization:
 
 - **Custom Tools**: Define your own tools by creating instances of `Tool` and providing them to the `CustomToolProvider`. This allows you to extend the functionality of the Langchain pipeline based on your specific use case.
 
