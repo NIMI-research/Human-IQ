@@ -1,4 +1,4 @@
-# Human-IQ
+# HumanIQ
 
 This repository is dedicated to a generalized approach of Human-IQ, where users can define their own Langchain pipeline with the flexibility to choose from multiple methods of few-shot examples, including Determinantal Point Processes (DPP) and sentence similarity. The goal of this project is to provide a customizable and extensible framework for building Langchain-based applications.
 
