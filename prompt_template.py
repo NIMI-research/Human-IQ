@@ -2,6 +2,7 @@ from typing import List
 from langchain.prompts import StringPromptTemplate
 from langchain.tools import Tool
 
+#Langchain Prompt Template Class.
 class CustomPromptTemplate(StringPromptTemplate):
     template: str
     tools: List[Tool]
