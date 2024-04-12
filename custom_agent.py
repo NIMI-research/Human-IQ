@@ -3,7 +3,7 @@ from langchain.chains import LLMChain
 from langchain.agents import AgentOutputParser
 from base_agent import BaseAgent
 
-# Edited the base class from langchain to adapt to accessing user question.
+# Edited the base class from langchain to adapt to our setting for accessing user question.
 # Customize this class for more functionality.
 class CustomAgent(BaseAgent):
     llm_chain: LLMChain
