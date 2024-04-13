@@ -1,4 +1,4 @@
-from typing import List
+from typing import Any, Dict, List
 from langchain.chains import LLMChain
 from langchain.agents import AgentOutputParser
 from base_agent import BaseAgent
