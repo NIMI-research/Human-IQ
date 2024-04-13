@@ -52,18 +52,18 @@ To use the Human-IQ framework, follow these steps:
    custom_tools = [
        Tool(
            name="wikipedia_search",
-           func=custom_search,
+           func=wikipedia_search,
            description="Useful for performing custom searches over wikipedia.",
        ),
        Tool(
            name="get_wikidata_id",
-           func=custom_calculator,
+           func=get_wikidata_id,
            description="Useful to retrieve wikidata entity ID given their label.",
        ),
    ]
 
    tool_provider = CustomToolProvider(custom_tools)
-   ```
+   ``` 
 
 4. Create an instance of `LangchainImpl` with the desired parameters and execute the pipeline:
    ```python
