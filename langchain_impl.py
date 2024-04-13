@@ -84,7 +84,7 @@ Question: {input}
                     Question: {ques}
                     Answer: """
         prompt = PromptTemplate(template=template, input_variables=["ques"])
-        llm = load_chain(self.model_name)
+        llm = ChatOpenAI(model_name = self.model_name, temperature=0)
         llm_chain = LLMChain(prompt=prompt, llm=llm)
         return llm_chain.run(ques)
 
