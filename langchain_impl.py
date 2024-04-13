@@ -3,8 +3,8 @@ from langchain.agents import AgentExecutor
 from langchain.chat_models import ChatOpenAI
 from langchain.callbacks import get_openai_callback
 from custom_agent import CustomAgent
-from output_parsers import CustomOutputParser
-from prompt_templates import CustomPromptTemplate
+from output_parser import CustomOutputParser
+from prompt_template import CustomPromptTemplate
 from template_construction import TemplateConstruction
 from langchain import LLMChain
 from langchain import PromptTemplate
