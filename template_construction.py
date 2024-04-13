@@ -4,6 +4,7 @@ import random
 from abc import ABC, abstractmethod
 from typing import List
 from sentence_transformers import SentenceTransformer, util
+from submodlib import LogDeterminantFunction
 import numpy as np
 from enchant.utils import levenshtein
 
